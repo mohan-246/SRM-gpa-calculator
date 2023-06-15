@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRM GPA calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+</head>
+
+<body class="bg-[#212121]">
+    <div class="text-[#14FFEC] text-3xl font-bold font-sans text-center mt-10 
+    ">SRM UNIVERSITY GPA CALCULATOR</div>
+    <section id="main-conatiner" class="gpa-calculator mx-[10%] my-[5%] rounded-2xl bg-[#323232]">
+        <div class="flex flex-col justify-center">
+            <div>
+                <p id="gpa" class="card hidden font-sans font-semibold  text-[#14FFEC] w-auto text-2xl mx-[10%] my-5 text-center">Your GPA is:
+                </p>
+            </div>
+            <div class="my-5">
+                <input type="reset"
+                class="hidden p-1 text-xl rounded  lg:w-40 w-40 m-5 bg-[#323232] hover:bg-[#14FFEC] hover:text-[#323232] border-2 text-[#14FFEC] border-[#14FFEC] text-center lg:mx-[45%] mx-[40%] " 
+                id="reset"></input>
+            </div>
+            <div class="mb-5   mx-[10%] w-[80%] ">
+                <form>
+                    <table class="table-auto  w-full">
+                        <thead>
+                            <tr class="text-lg text-[#14FFEC] flex-auto italic shadow-none font-bold font-sans">
+                                <th class="w-[15%]" scope="col">Course</th>
+                                <th scope="col">Credits</th>
+                                <th scope="col">Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr>
+                                <th class=" text-neutral-400" scope="row">1</th>
+                                <td><input type="number" id="one"
+                                        class="credits m-5 block  shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[90%]"
+                                        min="1"></input></td>
+                                <td> <select
+                                        class="grades cursor-pointer drop-shadow-md shadow rounded focus:outline-none w-[70%]">
+                                        <option>O</option>
+                                        <option>A+</option>
+                                        <option>A</option>
+                                        <option>B+</option>
+                                        <option>B</option>
+                                        <option>C</option>
+                                        <option>P</option>
+                                        <option>F</option>
+                                        <option>Ab</option>
+                                        <option>*</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-neutral-400">2</th>
+                                <td><input type="number" value=""
+                                        class="credits m-5 block appearance-none shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[90%]"
+                                        min="1"></input></td>
+                                <td> <select
+                                        class="grades cursor-pointer drop-shadow-md shadow rounded focus:outline-none w-[70%]">
+                                        <option>O</option>
+                                        <option>A+</option>
+                                        <option>A</option>
+                                        <option>B+</option>
+                                        <option>B</option>
+                                        <option>C</option>
+                                        <option>P</option>
+                                        <option>F</option>
+                                        <option>Ab</option>
+                                        <option>*</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-neutral-400">3</th>
+                                <td><input type="number" value=""
+                                        class="credits m-5 block appearance-none shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[90%]"
+                                        min="1"></input></td>
+                                <td> <select
+                                        class="grades cursor-pointer drop-shadow-md shadow rounded focus:outline-none w-[70%] ">
+                                        <option>O</option>
+                                        <option>A+</option>
+                                        <option>A</option>
+                                        <option>B+</option>
+                                        <option>B</option>
+                                        <option>C</option>
+                                        <option>P</option>
+                                        <option>F</option>
+                                        <option>Ab</option>
+                                        <option>*</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-neutral-400">4</th>
+                                <td><input type="number" value=""
+                                        class="credits m-5 block appearance-none shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[90%]"
+                                        min="1"></input></td>
+                                <td> <select
+                                        class="grades cursor-pointer drop-shadow-md shadow rounded focus:outline-none  w-[70%] ">
+                                        <option>O</option>
+                                        <option>A+</option>
+                                        <option>A</option>
+                                        <option>B+</option>
+                                        <option>B</option>
+                                        <option>C</option>
+                                        <option>P</option>
+                                        <option>F</option>
+                                        <option>Ab</option>
+                                        <option>*</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-neutral-400">5</th>
+                                <td><input type="number" value=""
+                                        class="credits m-5 block appearance-none shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[90%]"
+                                        min="1"></input></td>
+                                <td> <select
+                                        class="grades cursor-pointer drop-shadow-md shadow rounded focus:outline-none  w-[70%]">
+                                        <option>O</option>
+                                        <option>A+</option>
+                                        <option>A</option>
+                                        <option>B+</option>
+                                        <option>B</option>
+                                        <option>C</option>
+                                        <option>P</option>
+                                        <option>F</option>
+                                        <option>Ab</option>
+                                        <option>*</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"class="text-neutral-400">6</th>
+                                <td><input type="number" value=""
+                                        class="credits m-5 block appearance-none shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[90%]"
+                                        min="1"></input></td>
+                                <td> <select
+                                        class="grades cursor-pointer drop-shadow-md shadow rounded focus:outline-none w-[70%] ">
+                                        <option>O</option>
+                                        <option>A+</option>
+                                        <option>A</option>
+                                        <option>B+</option>
+                                        <option>B</option>
+                                        <option>C</option>
+                                        <option>P</option>
+                                        <option>F</option>
+                                        <option>Ab</option>
+                                        <option>*</option>
+                                    </select></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+            
+            </form>
+
+        </div>
+        <div class="justify-evenly flex">
+
+            <div ><button
+                    class="m-5 w-40 flex-1  button2 rounded"
+                    id="add">Add Course</button></div>
+
+            
+
+
+            <div><button
+                    class="m-5 flex-1 w-40 button1 rounded"
+                    onclick="calc()">Calculate</button></div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
