@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="DzzZWBFuY3mkEMu0icJCeV3VVtz33Wk-bYYxTwelDhY" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SRM GPA calculator</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,16 +16,19 @@
     <section id="main-conatiner" class="gpa-calculator mx-[10%] my-[5%] rounded-2xl bg-[#323232]">
         <div class="flex flex-col justify-center">
             <div>
-                <p id="gpa" class="card hidden font-sans font-semibold  text-[#14FFEC] w-auto text-2xl mx-[10%] my-5 text-center">Your GPA is:
+                <p id="gpa"
+                    class="card hidden font-sans font-semibold  text-[#14FFEC] w-auto text-2xl mx-[10%] my-5 text-center">
+                    Your GPA is:
                 </p>
             </div>
-            <div class="my-5">
-                <input type="reset"
-                class=" p-1 text-xl rounded hidden lg:w-[20%] w-auto m-5 bg-[#323232] hover:bg-[#14FFEC] hover:text-[#323232] border-2 text-[#14FFEC] border-[#14FFEC] text-center lg:mx-[40%] mx-[40%] " 
-                id="reset"></input>
-            </div>
+
             <div class="mb-5   mx-[10%] w-[80%] ">
                 <form>
+                    <div class="my-5">
+                        <input type="reset"
+                            class=" p-1 text-xl rounded hidden lg:w-[20%] w-auto m-5 bg-[#323232] hover:bg-[#14FFEC] hover:text-[#323232] border-2 text-[#14FFEC] border-[#14FFEC] text-center lg:mx-[40%] mx-[40%] "
+                            id="reset"></input>
+                    </div>
                     <table class="table-auto  w-full">
                         <thead>
                             <tr class="text-lg text-[#14FFEC] flex-auto italic shadow-none font-bold font-sans">
@@ -39,7 +41,7 @@
                             <tr>
                                 <th class=" text-neutral-400" scope="row">1</th>
                                 <td><input type="number" id="one"
-                                        class="credits m-5 block font-sans font-semibold shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[70%] lg:w-[90%]"
+                                        class="credits m-5 block font-sans md:w-[90%] font-semibold shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[70%] lg:w-[90%]"
                                         min="1"></input></td>
                                 <td> <select
                                         class="grades cursor-pointer font-sans font-semibold drop-shadow-md shadow rounded focus:outline-none w-[70%]">
@@ -58,7 +60,7 @@
                             <tr>
                                 <th scope="row" class="text-neutral-400">2</th>
                                 <td><input type="number" value=""
-                                        class="credits font-sans font-semibold m-5 block appearance-none shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[70%] lg:w-[90%]"
+                                        class="credits font-sans md:w-[90%] font-semibold m-5 block appearance-none shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[70%] lg:w-[90%]"
                                         min="1"></input></td>
                                 <td> <select
                                         class="grades font-sans font-semibold cursor-pointer drop-shadow-md shadow rounded focus:outline-none w-[70%]">
@@ -77,7 +79,7 @@
                             <tr>
                                 <th scope="row" class="text-neutral-400">3</th>
                                 <td><input type="number" value=""
-                                        class="credits font-sans font-semibold m-5 block appearance-none shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[70%] lg:w-[90%]"
+                                        class="credits font-sans md:w-[90%] font-semibold m-5 block appearance-none shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[70%] lg:w-[90%]"
                                         min="1"></input></td>
                                 <td> <select
                                         class="grades font-sans font-semibold cursor-pointer drop-shadow-md shadow rounded focus:outline-none w-[70%] ">
@@ -96,7 +98,7 @@
                             <tr>
                                 <th scope="row" class="text-neutral-400">4</th>
                                 <td><input type="number" value=""
-                                        class="credits font-sans font-semibold m-5 block appearance-none shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[70%] lg:w-[90%]"
+                                        class="credits font-sans md:w-[90%] font-semibold m-5 block appearance-none shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[70%] lg:w-[90%]"
                                         min="1"></input></td>
                                 <td> <select
                                         class="grades font-sans font-semibold cursor-pointer drop-shadow-md shadow rounded focus:outline-none  w-[70%] ">
@@ -115,7 +117,7 @@
                             <tr>
                                 <th scope="row" class="text-neutral-400">5</th>
                                 <td><input type="number" value=""
-                                        class="credits font-sans font-semibold m-5 block appearance-none shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[70%] lg:w-[90%]"
+                                        class="credits font-sans md:w-[90%] font-semibold m-5 block appearance-none shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[70%] lg:w-[90%]"
                                         min="1"></input></td>
                                 <td> <select
                                         class="grades font-sans font-semibold cursor-pointer drop-shadow-md shadow rounded focus:outline-none  w-[70%]">
@@ -132,9 +134,9 @@
                                     </select></td>
                             </tr>
                             <tr>
-                                <th scope="row"class="text-neutral-400">6</th>
+                                <th scope="row" class="text-neutral-400">6</th>
                                 <td><input type="number" value=""
-                                        class="credits font-sans font-semibold m-5 block appearance-none shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[70%] lg:w-[90%]"
+                                        class="credits font-sans md:w-[90%] font-semibold m-5 block appearance-none shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[70%] lg:w-[90%]"
                                         min="1"></input></td>
                                 <td> <select
                                         class="grades font-sans font-semibold cursor-pointer drop-shadow-md shadow rounded focus:outline-none w-[70%] ">
@@ -153,17 +155,17 @@
                         </tbody>
                     </table>
             </div>
-            
+
             </form>
 
         </div>
         <div class="justify-evenly flex">
 
-            <div ><button
+            <div><button
                     class="m-5 lg:w-40 w-auto flex-1 text-sm p-2 button2 rounded lg:text-xl  bg-[#323232] hover:bg-[#14FFEC] hover:text-[#323232] border-2 text-[#14FFEC] border-[#14FFEC]"
                     id="add">Add Course</button></div>
 
-            
+
 
 
             <div><button
