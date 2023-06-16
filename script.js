@@ -45,17 +45,21 @@ function calc(event){
   // console.log(typeof(tot_grade_credit),typeof(tot_credit));
    sgpa=tot_grade_credit/tot_credit;
    console.log(sgpa);
-   
+   if(Number.isNaN(sgpa)){
+      window.alert("Please enter valid credit number.");
+   }
+   else{
    //document.getElementById("gpa").classList.remove("hidden");
    $('#gpa').removeClass("hidden");
-   $('#gpa').html("Your GPA is: "+sgpa.toFixed(2));
+   $('#gpa').html("Your have scored a GPA of "+sgpa.toFixed(2));
    $('#reset').removeClass("hidden");
    allcgpa.push(sgpa.toFixed(2));
+   }
 }
 
 $('#add').on('click', () => {
    courses++;
-   $('table tbody').append("<tr><th scope='row' class='text-neutral-400'>"+courses+"</th><td><input type='number' id='one'class='credits m-5 block  shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[70%] lg:w-[90%]'min='1'></input></td><td> <select class='grades cursor-pointer drop-shadow-md shadow rounded focus:outline-none w-[70%]'><option>O</option><option>A+</option><option>A</option><option>B+</option><option>B</option><option>C</option><option>P</option><option>F</option><option>Ab</option><option>*</option></select></td></tr>")
+   $('table tbody').append("<tr><th scope='row' class='text-neutral-400'>"+courses+"</th><td><input type='number' id='one'class='credits  font-sans font-semibold m-5 block  shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[70%] lg:w-[90%]'min='1'></input></td><td> <select class='grades font-sans font-semibold cursor-pointer drop-shadow-md shadow rounded focus:outline-none w-[70%]'><option>O</option><option>A+</option><option>A</option><option>B+</option><option>B</option><option>C</option><option>P</option><option>F</option><option>Ab</option><option>*</option></select></td></tr>")
 });
 
 $('#reset').on('click', () => {
