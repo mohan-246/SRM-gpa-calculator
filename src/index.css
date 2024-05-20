@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* tr:last-child tr{
+  margin-top: 30px; 
+} */
+  
+  .float {
+    /* animation: moveRandomly 5s infinite forwards;  */
+  }
+  @keyframes moveRandomly {
+    0% {
+      transform: translate(0, 0); /* Initial position */
+    }
+    100% {
+      transform: translate(var(--x), var(--y)); /* Random position */
+    }
+  }
