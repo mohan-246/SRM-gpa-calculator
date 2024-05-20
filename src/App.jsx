@@ -81,66 +81,33 @@ const App = () => {
     prevCourses[index][1] = Math.max(e.target.value, 0);
     setCourses(prevCourses);
   };
-  useEffect(() => {
-    let i = 0
-    const movingElement1 = document.querySelector("#floater-1");
-    const movingElement2 = document.querySelector("#floater-2");
-    const movingElement3 = document.querySelector("#floater-3");
-    const movingElement4 = document.querySelector("#floater-4");
-    moveElements(movingElement1 , i);
-    moveElements(movingElement2 , i);
-    moveElements(movingElement3 , i);
-    moveElements(movingElement4 , i);
-    setHue((prev) => (prev + 5)%360 )
-    setInterval(() => {
-      
-      moveElements(movingElement1 , i);
-      moveElements(movingElement3 , i)
-      ++i;
-      moveElements(movingElement2 , i);
-      moveElements(movingElement4 , i)
-    }, 10000);
-  }, []);
-  const moveElements = (movingElement, i) => {
-    const maxX = window.innerWidth - (movingElement.offsetWidth / 2);
-    const maxY = window.innerHeight - (movingElement.offsetHeight / 2);
-    let x , y 
-
-    if (i % 2 == 0) {
-      x = getRandomInt(- movingElement.offsetWidth / 2, maxX / 2);
-      y = getRandomInt(- movingElement.offsetHeight / 2, maxY / 2);
-    } else {
-      x = getRandomInt(maxX / 2, maxX);
-      y = getRandomInt(maxY / 2, maxY);
-    }
-    movingElement.style.left = `${x}px`;
-    movingElement.style.top = `${y}px`;
-  };
-  function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+ 
   return (
-    <div className=" bg-gradient-to-tl from-[#202020] to-[#181818] min-w-screen min-h-screen h-auto flex items-center justify-center">
+    <div className=" bg-gradient-to-tl from-zinc-950 via-gray-950 to-slate-950 min-w-screen min-h-screen h-auto flex items-center justify-center">
       <div className="fixed w-screen h-screen">
        
         <div
           id="floater-1"
-          className="fixed top-[67px] duration-[7000ms] left-[1350px] sm:h-96 h-32 sm:w-96 w-32 bg-gradient-to-br from-teal-800 via-cyan-800 to-sky-700 rounded-full"
+          className="fixed circle-1 top-[117px] duration-[7000ms] left-[1350px] h-[36rem] w-[36rem] bg-gradient-to-br from-yellow-800 via-amber-800 to-orange-800 rounded-full"
         ></div>
         <div
           id="floater-2"
-          className="fixed top-[595px] duration-[7000ms] left-[560px] sm:h-96 h-32 sm:w-96 w-32 bg-gradient-to-br from-rose-800 via-pink-800 to-fuchsia-700 rounded-full"
+          className="fixed circle-2 top-[695px] duration-[7000ms] left-[-60px] h-[10rem] w-[10rem]  bg-gradient-to-br from-yellow-800 via-amber-800 to-orange-800 rounded-full"
         ></div>
         <div
           id="floater-3"
-          className="fixed top-[67px] duration-[7000ms] left-[1350px] sm:h-96 h-32 sm:w-96 w-32 bg-gradient-to-br from-yellow-800 via-amber-800 to-orange-700 rounded-full"
+          className="fixed circle-3 top-[-17px] duration-[7000ms] left-[150px] h-[30rem] w-[30rem]  bg-gradient-to-br from-yellow-800 via-amber-800 to-orange-800 rounded-full"
         ></div>
         <div
           id="floater-4"
-          className="fixed top-[595px] duration-[7000ms] left-[560px] sm:h-96 h-32 sm:w-96 w-32 bg-gradient-to-br from-lime-800 via-green-800 to-emerald-700 rounded-full"
+          className="fixed circle-4 top-[595px] duration-[7000ms] left-[760px] h-[18rem] w-[18rem]  bg-gradient-to-br from-yellow-800 via-amber-800 to-orange-800 rounded-full"
+        ></div>
+        <div
+          id="floater-5"
+          className="fixed circle-4 top-[695px] duration-[7000ms] left-[2000px] h-[20rem] w-[20rem]  bg-gradient-to-br from-yellow-800 via-amber-800 to-orange-800 rounded-full"
         ></div>
       </div>
-      <div className={`backdrop-blur-3xl bg-opacity-10 hue-rotate-[${hue}deg] border-white border-2 border-opacity-15 bg-white rounded-lg container mx-auto py-4 oveflow-x-auto text-gray-50 flex-col items-center justify-center`}>
+      <div className={`backdrop-blur-3xl bg-opacity-10 hue-rotate-[${hue}deg] border-white border-2 border-opacity-15 bg-stone-900 rounded-lg container mx-auto py-4 oveflow-x-auto text-[#bdbbbc] flex-col items-center justify-center`}>
         <h1 className="text-3xl font-bold mb-4 text-[#ededed] text-center font-sans uppercase">SRM GPA Calculator</h1>
         <table className=" text-center w-full my-4">
           <thead className="">
@@ -165,7 +132,7 @@ const App = () => {
                 handleDeleteCourse={handleDeleteCourse}
               />
             ))}
-            <tr className="flex-col bg-transparent text-gray-50 select-none">
+            <tr className="flex-col bg-transparent text-[#ededed] select-none">
               <td className="text-center  sm:w-auto w-1/12   px-2 py-2  rounded-md"></td>
               <td className="text-center  w-1/2 sm:w-auto px-2 py-2 rounded-md text-nowrap">
                 <p className="font-semibold ">GPA: {totalWeightedPoints}</p>

@@ -2,18 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-/* tr:last-child tr{
-  margin-top: 30px; 
-} */
-  
-  .float {
-    /* animation: moveRandomly 5s infinite forwards;  */
-  }
-  @keyframes moveRandomly {
-    0% {
-      transform: translate(0, 0); /* Initial position */
+.circle-1{
+  animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
+  animation-iteration-count: infinite;
+  animation-name: float;
+  -webkit-animation-name: float;
+  animation-duration: 6s;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+  animation-direction: alternate;
+}
+.circle-4{
+  animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
+  animation-iteration-count: infinite;
+  animation-name: float;
+  -webkit-animation-name: float;
+  animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  animation-direction: alternate;
+}
+.circle-2{
+  animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
+  animation-iteration-count: infinite;
+  animation-name: float;
+  -webkit-animation-name: float;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  animation-direction: alternate;
+}
+.circle-3{
+  animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
+  animation-iteration-count: infinite;
+  animation-name: float;
+  -webkit-animation-name: float;
+  animation-duration: 4.5s;
+  -webkit-animation-duration: 4.5s;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  animation-direction: alternate;
+}
+
+
+
+@keyframes float {
+
+  0% {
+    -webkit-transform: rotateX(0deg) translateY(0px);
+    -moz-transform: rotateX(0deg) translateY(0px);
+    -ms-transform: rotateX(0deg) translateY(0px);
+    -o-transform: rotateX(0deg) translateY(0px);
+    transform: rotateX(0deg) translateY(0px);
     }
-    100% {
-      transform: translate(var(--x), var(--y)); /* Random position */
-    }
+
+  50% {
+    -webkit-transform: rotateX(0deg) translateY(1px) translateX(5px);
+    -moz-transform: rotateX(0deg) translateY(10px) translateX(5px);
+    -ms-transform: rotateX(0deg) translateY(30px) translateX(5px);
+    -o-transform: rotateX(0deg) translateY(40px) translateX(5px);
+    transform: rotateX(0deg) translateY(10px) translateX(5px);
+}
+  100% {
+    -webkit-transform: rotateX(0deg) translateY(0px) translateX(1px);
+    -moz-transform: rotateX(0deg) translateY(0px) translateX(1px);
+    -ms-transform: rotateX(0deg) translateY(0px) translateX(1px);
+    -o-transform: rotateX(0deg) translateY(0px) translateX(1px);
+    transform: rotateX(0deg) translateY(0px) translateX(1px);
   }
+
+}
